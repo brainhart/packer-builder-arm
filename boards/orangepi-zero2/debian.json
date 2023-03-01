@@ -2,12 +2,12 @@
   "variables": {},
   "builders": [{
     "type": "arm",
-    "file_urls" : ["Orangepizero2_3.0.6_debian_bullseye_server_linux5.16.17.img.gz"],
+    "file_urls" : ["https://github.com/brainhart/packer-builder-arm/releases/download/debian-bullseye/Orangepizero2_3.0.6_debian_bullseye_server_linux5.16.17.img.gz"],
     "file_checksum": "30ced16501527cd884bf3fea84e51739",
     "file_checksum_type": "md5",
     "file_unarchive_cmd": ["gunzip", "$ARCHIVE_PATH"],
-    "file_target_extension": "7z",
-    "image_build_method": "new",
+    "file_target_extension": "gz",
+    "image_build_method": "reuse",
     "image_path": "debian.img",
     "image_size": "2G",
     "image_type": "dos",
@@ -23,8 +23,8 @@
     ],
     "image_setup_extra": [],
     "image_chroot_env": ["PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin"],
-    "qemu_binary_source_path": "/usr/bin/qemu-arm-static",
-    "qemu_binary_destination_path": "/usr/bin/qemu-arm-static"
+    "qemu_binary_source_path": "/usr/bin/qemu-aarch64-static",
+    "qemu_binary_destination_path": "/usr/bin/qemu-aarch64-static"
   }],
   "provisioners": [
     {
