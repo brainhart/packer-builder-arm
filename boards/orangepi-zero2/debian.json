@@ -29,8 +29,8 @@
   "provisioners": [
     {
       "type": "shell",
-      "inline": [
-        "touch /tmp/test"
+      "scripts": [
+        "scripts/setup_ssh.sh",
       ]
     }
   ],

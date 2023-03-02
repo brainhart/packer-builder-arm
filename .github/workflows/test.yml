@@ -60,6 +60,7 @@ jobs:
       matrix:
         boards:
           - beaglebone-black/debian.json
+          - orangepi-zero2/debian.json
     name: Build ${{ matrix.boards }} image
     runs-on: ubuntu-latest
     steps:
